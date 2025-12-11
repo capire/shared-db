@@ -1,0 +1,34 @@
+{
+  "name": "shared-db-mtx",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "@sap/cds-mtxs": "git+https://github.tools.sap/cap/cds-mtxs.git",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "profile": "mtx-sidecar",
+    "extensibility": true,
+    "requires": {
+      "[development]": {
+        "db": {
+          "impl": "@cap-js/sqlite",
+          "credentials": {
+            "url": "../../../db.sqlite"
+          },
+          "kind": "sqlite"
+        }
+      }
+    }
+  }
+}

@@ -5,11 +5,22 @@
   "dependencies": {
     "@capire/bookstore": "*",
     "@capire/orders": "*",
-    "@capire/reviews": "*"
+    "@capire/reviews": "*",
+    "@sap/cds-mtxs": "git+https://github.tools.sap/cap/cds-mtxs.git"
   },
   "cds": {
     "sql": {
       "native_hana_associations": false
+    },
+    "profile": "with-mtx-sidecar",
+    "requires": {
+      "[production]": {
+        "multitenancy": true
+      },
+      "[with-mtx]": {
+        "multitenancy": true
+      },
+      "extensibility": true
     }
   }
 }
