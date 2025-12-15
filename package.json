@@ -6,7 +6,7 @@
     "@capire/bookstore": "*",
     "@capire/orders": "*",
     "@capire/reviews": "*",
-    "@sap/cds-mtxs": "git+https://github.tools.sap/cap/cds-mtxs.git"
+    "@sap/cds-mtxs": "3.6.0"
   },
   "cds": {
     "sql": {
